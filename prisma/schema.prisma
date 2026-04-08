@@ -1,0 +1,45 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Users {
+  id     Int     @id @default(autoincrement())
+  name   String? @db.VarChar(100)
+  code   String? @db.VarChar(4)
+  active Boolean @default(true)
+}
+
+model Sectors {
+  id         Int      @id @default(autoincrement())
+  name       String?  @db.VarChar(100)
+  beds       Int?
+  umbrellas  Int?
+  sector_num Int?
+  city_id    Int?     @default(1)
+  active     Boolean  @default(true)
+  stocks     Stocks[]
+}
+
+model Stocks {
+  id                 Int       @id @default(autoincrement())
+  date_stock         DateTime? @db.Date
+  sector_id          Int?
+  beds_replaced      Int?
+  beds_retired       Int?
+  beds_broken        Int?
+  umbrellas_replaced Int?
+  umbrellas_retired  Int?
+  umbrellas_broken   Int?
+  active             Boolean   @default(true)
+  sector             Sectors?  @relation(fields: [sector_id], references: [id])
+}
