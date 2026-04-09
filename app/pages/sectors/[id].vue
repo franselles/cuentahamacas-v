@@ -160,7 +160,7 @@ const handleSave = async () => {
                     class="flex items-center gap-2 border-b border-gray-100 dark:border-gray-800 pb-2"
                 >
                     <UIcon
-                        name="i-heroicons-wrench-screwdriver"
+                        name="i-heroicons-square-3-stack-3d"
                         class="text-gray-400 w-5 h-5"
                     />
                     <h2

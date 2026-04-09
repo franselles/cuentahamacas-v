@@ -1,6 +1,6 @@
 {
   "name": "cuentahamacas-v",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Control colocacion y retirada de hamacas y sombrillas",
   "author": "franselles",
   "type": "module",
