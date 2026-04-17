@@ -72,7 +72,7 @@ const handleLogin = async () => {
         </UCard>
 
         <p class="text-center mt-8 text-xs text-gray-400">
-            v0.0.4 - Control stocks hamacas y sombrillas
+            v0.0.5 - Control stocks hamacas y sombrillas
         </p>
         <p class="text-center mt-8 text-xs text-gray-400">en desarrollo</p>
         <p class="text-center mt-8 text-xs text-gray-400">R.A. BENIDORM S.L.</p>
