@@ -43,7 +43,7 @@ const emit = defineEmits(["click"]);
                     <span class="text-sm font-bold">{{ sector.max_beds }}</span>
                     <span
                         class="text-[10px] text-gray-400 uppercase tracking-tighter"
-                        >Total Hamacas</span
+                        >Máximo Hamacas</span
                     >
                 </div>
 
@@ -71,7 +71,7 @@ const emit = defineEmits(["click"]);
                     }}</span>
                     <span
                         class="text-[10px] text-gray-400 uppercase tracking-tighter"
-                        >Total Sombrillas</span
+                        >Máximo Sombrillas</span
                     >
                 </div>
 
