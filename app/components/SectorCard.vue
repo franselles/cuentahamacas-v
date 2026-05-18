@@ -4,6 +4,8 @@ interface Sector {
     name: string;
     beds: number;
     umbrellas: number;
+    max_beds: number;
+    max_umbrellas: number;
     sector_num?: number;
 }
 
@@ -36,12 +38,40 @@ const emit = defineEmits(["click"]);
                 <div class="flex flex-col items-center">
                     <UIcon
                         name="i-heroicons-square-3-stack-3d"
+                        class="text-gray-400 w-5 h-5"
+                    />
+                    <span class="text-sm font-bold">{{ sector.max_beds }}</span>
+                    <span
+                        class="text-[10px] text-gray-400 uppercase tracking-tighter"
+                        >Total Hamacas</span
+                    >
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <UIcon
+                        name="i-heroicons-square-3-stack-3d"
                         class="text-blue-500 w-5 h-5"
                     />
                     <span class="text-sm font-bold">{{ sector.beds }}</span>
                     <span
                         class="text-[10px] text-gray-400 uppercase tracking-tighter"
                         >Hamacas</span
+                    >
+                </div>
+
+                <div
+                    class="flex flex-col items-center border-l pl-3 border-gray-100 dark:border-gray-800"
+                >
+                    <UIcon
+                        name="i-heroicons-sun"
+                        class="text-gray-400 w-5 h-5"
+                    />
+                    <span class="text-sm font-bold">{{
+                        sector.max_umbrellas
+                    }}</span>
+                    <span
+                        class="text-[10px] text-gray-400 uppercase tracking-tighter"
+                        >Total Sombrillas</span
                     >
                 </div>
 

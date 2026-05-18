@@ -20,14 +20,16 @@ model Users {
 }
 
 model Sectors {
-  id         Int      @id @default(autoincrement())
-  name       String?  @db.VarChar(100)
-  beds       Int?
-  umbrellas  Int?
-  sector_num Int?
-  city_id    Int?     @default(1)
-  active     Boolean  @default(true)
-  stocks     Stocks[]
+  id            Int      @id @default(autoincrement())
+  name          String?  @db.VarChar(100)
+  beds          Int?
+  umbrellas     Int?
+  max_beds      Int?
+  max_umbrellas Int?
+  sector_num    Int?
+  city_id       Int?     @default(1)
+  active        Boolean  @default(true)
+  stocks        Stocks[]
 }
 
 model Stocks {

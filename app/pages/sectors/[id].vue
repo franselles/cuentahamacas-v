@@ -13,6 +13,8 @@ interface Sector {
     name: string;
     beds: number;
     umbrellas: number;
+    max_beds: number;
+    max_umbrellas: number;
     sector_num: number;
 }
 
