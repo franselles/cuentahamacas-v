@@ -4,6 +4,8 @@ interface Sector {
     id: number;
     name: string;
     beds: number;
+    max_beds: number;
+    max_umbrellas: number;
     umbrellas: number;
     sector_num?: number;
 }
