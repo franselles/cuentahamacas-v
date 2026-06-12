@@ -43,12 +43,20 @@ const goToSector = (id: number) => {
                 </p>
             </div>
 
-            <UButton
-                icon="i-heroicons-arrow-left-on-rectangle"
-                color="neutral"
-                variant="ghost"
-                @click="handleLogout"
-            />
+            <div class="flex gap-2">
+                <UButton
+                    icon="i-heroicons-printer"
+                    color="neutral"
+                    variant="ghost"
+                    @click="navigateTo('/print')"
+                />
+                <UButton
+                    icon="i-heroicons-arrow-left-on-rectangle"
+                    color="neutral"
+                    variant="ghost"
+                    @click="handleLogout"
+                />
+            </div>
         </header>
 
         <div v-if="pending" class="grid gap-4">
